@@ -1,0 +1,23 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'scala'
+apply plugin: 'idea'
+
+repositories{
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies{
+
+    compile "org.scala-lang:scala-library:2.10.4"
+    compile "org.scala-lang:scala-compiler:2.10.4"
+
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.1.1'
+    compile group: 'org.apache.spark', name: 'spark-mllib_2.11', version: '2.1.1'
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '2.1.1'
+
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+}
